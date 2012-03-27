@@ -117,7 +117,7 @@ apache2_site "000-default" do
   enable false
 end
 
-web_app "wordpress" do
+apache2_web_app "wordpress" do
   template "wordpress.conf.erb"
   docroot node['wordpress']['dir']
   server_name server_fqdn
