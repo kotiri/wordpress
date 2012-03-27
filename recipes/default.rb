@@ -113,7 +113,7 @@ template "#{node['wordpress']['dir']}/wp-config.php" do
   notifies :write, "log[Navigate to 'http://#{server_fqdn}/wp-admin/install.php' to complete wordpress installation]"
 end
 
-apache_site "000-default" do
+apache2_site "000-default" do
   enable false
 end
 
