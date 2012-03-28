@@ -114,7 +114,7 @@ template "#{node['wordpress']['dir']}/wp-config.php" do
 end
 
 apache2_site "000-default" do
-  enable false
+  action :disable
 end
 
 apache2_web_app "wordpress" do
